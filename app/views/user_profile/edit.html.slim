@@ -1,0 +1,23 @@
+h1 Edit Profile
+
+= link_to "Edit Email Or Password", edit_user_path(current_user)
+p 
+
+= form_for @user_profile, url: user_profile_path(@user_profile) do |f|
+
+	.field
+	 = f.label :first_name
+	 = f.text_field :first_name
+
+	.field
+	 = f.label :last_name
+	 = f.text_field :last_name
+
+	.field
+	 = f.label :contact_no
+	 = f.text_field :contact_no
+
+	.field
+  	= f.file_field :avatar
+
+	= f.submit "Save"

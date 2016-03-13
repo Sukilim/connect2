@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+  title ConnectMalaysia
+  meta content="initial-scale=1" name="viewport"
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': false
+  = javascript_include_tag 'application', 'data-turbolinks-track': false
+  = csrf_meta_tags
+
+  //! Google Fonts
+  link href="http://fonts.googleapis.com/css?family=Rochester" rel="stylesheet" type="text/css"
+  link href="http://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css"
+
+  body
+    = render "pages/partials/header"
+    #page
+      = yield
+    footer
+      = render "pages/partials/footer"
+    = render "shared/log_in"
+    = render "shared/sign_up"
+
+
+

@@ -1,0 +1,13 @@
+.container
+  
+
+    h1 Just Making Sure You Are Not a Robot
+    = form_for :user_profile, :controller => :user_profile, :action => 'check_pin_code' do |f|
+      .form-group
+        = f.label :pin_code, 'Pin code*'
+        = f.text_field :pin_code, required: :true, type: "text", placeholder: "Enter Pin Code", class: 'form-control'
+      .form-group
+        = button_to "Verify Pin", {:action => "check_pin_code", :controller => "user_profile"}, class: 'btn btn-primary min-wide'
+
+    h1 Did not receive pin code?
+    = link_to "Click here to resend", user_profile_verification_path, class: 'btn btn-primary min-wide'

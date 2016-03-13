@@ -1,0 +1,8 @@
+.container
+	= form_tag password_resets_path, :method => :post do
+		.row
+			.field.col-md-offset-3
+			  = label_tag :email
+			  br
+			  = text_field_tag :email 
+			  = submit_tag "Reset my password!"

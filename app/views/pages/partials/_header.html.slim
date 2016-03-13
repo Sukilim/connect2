@@ -1,0 +1,56 @@
+header
+  #top
+    .container
+      p.pull-left.text-note.hidden-xs
+        i.fa.fa-phone
+        | Need Support? 1-800-666-8888
+      ul.nav.nav-pills.nav-top.navbar-right
+        li.login
+          a href="javascript:void(0);" 
+            i.fa.fa-user
+        li
+          a data-original-title="Email" data-placement="bottom" data-toggle="tooltip" href="#" title="" 
+            i.fa.fa-envelope-o
+        li
+          a data-original-title="Facebook" data-placement="bottom" data-toggle="tooltip" href="#" title="" 
+            i.fa.fa-facebook
+        li
+          a data-original-title="Twitter" data-placement="bottom" data-toggle="tooltip" href="#" title="" 
+            i.fa.fa-twitter
+        li
+          a data-original-title="Google+" data-placement="bottom" data-toggle="tooltip" href="#" title="" 
+            i.fa.fa-google-plus
+  nav.navbar.navbar-default.pgl-navbar-main role="navigation" 
+    .container
+      .navbar-header
+        button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button" 
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a href="/"
+          img.ing-logo src="/assets/logo.png" 
+      .navbar-collapse.collapse.width
+        ul.nav.navbar-nav.pull-right
+          li.dropdown
+            a.dropdown-toggle data-target="#" data-toggle="dropdown" href="index.html"  Events
+            ul.dropdown-menu
+              li
+                a href="#{requests_path}"  All Events
+              li
+                a href="/"  Recommended Events
+
+          - if current_user
+            li
+              a.dropdown-toggle data-toggle="dropdown" href="/"  Mentee
+            li
+              a.dropdown-toggle data-toggle="dropdown" href="#{users_path}"  Mentor
+            li
+              a.dropdown-toggle data-toggle="dropdown" href="#{user_path(current_user)}" Profile
+            li 
+              = link_to "Logout", "#", method: :delete
+          - else
+            li 
+              button type="button" class="btn btn-default" data-toggle="modal" data-target="#register-modal" Sign Up
+            li 
+              button type="button" class="btn btn-default" data-toggle="modal" data-target="#signup-modal" Log In

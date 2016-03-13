@@ -1,0 +1,65 @@
+.navbar-default{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $transparent-background;
+  opacity: 0.9;
+  // border-color: $white;
+}
+
+.btn-default{
+  background-color: $transparent-background;
+  border: 1px solid white;
+  padding: 30px 20px;
+  color: #777;
+  display: block;
+}
+
+.header-logo{
+    width: auto; /* you can use % */
+    height: auto;
+}
+// .btn{
+//  text-transform: capitalize;
+// }
+
+.page-top-profile {
+  background-color: $transparent-background;   
+}
+
+.img-responsive {
+  height: 396px;
+  object-position: 50% 50%; /* default value: image is centered*/
+  object-position: 0 0; 
+}
+
+.img-slide {
+  height: 800px;
+  width: 1280px;
+  object-position: 50% 50%; /* default value: image is centered*/
+  object-position: 0 0; 
+}
+
+.ing-logo {
+  height: 100px;
+  width: 300px;
+}
+
+.img-events {
+  height: 600px;
+  width:  200px;
+}
+
+.img-circle {
+  height: 100px;
+  width: 100px;
+  margin: 25px auto;
+
+}
+
+.img-profile {
+  width: 200px
+}
+
+.img-upcoming {
+  width: 396px
+}

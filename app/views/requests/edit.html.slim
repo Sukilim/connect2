@@ -1,0 +1,51 @@
+h1 Edit Request
+
+= form_for @request, url: request_path(@request) do |f|
+
+	= f.label :area_id
+	= f.text_field :area_id
+
+	= f.label :location_id
+	= f.text_field :location_id
+
+	= f.label :budget_min
+	= f.text_field :budget_min
+
+	= f.label :budget_max
+	= f.text_field :budget_max
+ 
+	= f.label :rent_sale
+	= f.text_field :rent_sale
+
+
+	= f.label :pet_friendly
+	= f.text_field :pet_friendly
+
+	= f.label :sq_ft
+	= f.text_field :sq_ft
+
+
+	= f.label :furnished
+	= f.text_field :furnished
+
+ 
+	= f.label :no_of_rooms
+	= f.text_field :no_of_rooms
+
+
+	= f.label :no_of_carpark
+	= f.text_field :no_of_carpark
+
+	 
+	= f.label :house_condo
+	= f.text_field :house_condo
+
+
+	= f.label :date_needed
+	= f.text_field :date_needed
+
+
+	= f.label :special_req
+	= f.text_area :special_req
+
+  	= f.submit "Submit"

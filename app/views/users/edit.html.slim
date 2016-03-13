@@ -1,0 +1,20 @@
+h1 Edit Email or Password
+
+= form_for :user, url: user_path(current_user), method: :put do |f|
+
+	.field
+	 = f.label :email
+	 = f.text_field :email
+
+	.field
+	 = f.label :password
+	 = f.password_field :password
+
+	.field
+	 = f.label :password_confirmation
+	 = f.password_field :password_confirmation
+
+	 = f.submit "Save"
+
+	 .field
+	 = link_to "Delete Account", user_path(current_user), method: :delete

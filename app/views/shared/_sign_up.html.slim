@@ -1,0 +1,42 @@
+#register-modal.modal.fade tabeindex="-1" role="dialog"
+  .modal-dialog role="document"
+    .modal-content
+      .modal-header
+        .button.close aria-label="Close" data-dismiss="modal" type="button" ×
+      .modal-body
+        - if @user
+          = form_for @user, url: users_path, method: :post do |f|
+            .form-container
+              
+              .form-row
+                .h1 Sign Up
+              .form-row 
+                =f.label :email
+                br
+                =f.email_field :email, required: :true, class:'input-box'
+              .form-row
+                =f.label :password
+                br
+                =f.password_field :password, required: :true, class:'input-box'
+              .form-row
+                =f.label :password_confirmation
+                br
+                =f.password_field :password_confirmation, required: :true, class:'input-box'
+              = f.fields_for :user_profile do |builder|
+                .form-row
+                  = builder.label :first_name
+                  br
+                  = builder.text_field :first_name, required: :true, class:'input-box'
+
+                .form-row
+                  = builder.label :last_name
+                  br
+                  = builder.text_field :last_name, class:'input-box'
+
+                .form-row
+                  = builder.label :contact_no
+                  br
+                  = builder.text_field :contact_no, required: :true, class:'input-box'
+
+              .form-row
+                =f.submit "Submit", class: "btn btn-primary"
